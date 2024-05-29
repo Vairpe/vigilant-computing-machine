@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "3f2634b9-ea92-42d6-81f7-2e12a8a1cdc2",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35078512"
+	},
+	"item": [
+		{
+			"name": "https://api.github.com/user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"状态码为200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.github.v3+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "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"
+					}
+				],
+				"url": {
+					"raw": "https://api.github.com/search/users?q=Vairpe",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"search",
+						"users"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Vairpe"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{base_url}}/search/users?q={{query}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"状态码为200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.github.v3+json"
+					},
+					{
+						"key": "Authorization",
+						"value": "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"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/search/users?q={{query}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"search",
+						"users"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "{{query}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

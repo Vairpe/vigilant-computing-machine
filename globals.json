@@ -1,0 +1,21 @@
+{
+	"id": "53b6f85b-ca84-43c4-85d8-9e9e25d08b63",
+	"values": [
+		{
+			"key": "base_url",
+			"value": "https://api.github.com",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "query",
+			"value": "Vairpe",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2024-05-29T06:04:38.150Z",
+	"_postman_exported_using": "Postman/11.1.14"
+}
